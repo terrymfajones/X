@@ -14,17 +14,12 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
+        color: white; /* Set the symbol color to white */
       }
       
-      /* Play icon style (you can customize this) */
-      #playButton::before {
-        content: '▶'; /* Play symbol */
-        color: #000; /* Change color to your preference */
-      }
-
       /* Optionally, change the button appearance when hovered */
       #playButton:hover {
-        color: #f00; /* Change to any color when hovered */
+        color: #f0f0f0; /* Slightly lighter color when hovered (optional) */
       }
     </style>
   </head>
@@ -59,6 +54,9 @@
       const playButton = document.getElementById('playButton');
       const audio = document.getElementById('bgMusic');
 
+      // Set initial button to play symbol
+      playButton.innerHTML = '▶'; 
+
       // When the user clicks the button, play or pause the music
       playButton.addEventListener('click', function() {
         if (audio.paused) {
@@ -66,4 +64,9 @@
           playButton.innerHTML = '⏸';  // Change button to pause symbol
         } else {
           audio.pause();
-          play
+          playButton.innerHTML = '▶';  // Change button back to play symbol
+        }
+      });
+    </script>
+  </body>
+</html>
