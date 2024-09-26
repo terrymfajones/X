@@ -34,11 +34,15 @@
 
       /* Main content styling */
       .maincenter {
-        position: relative;
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Align items in a column */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
         z-index: 1; /* Bring content above the video */
         color: white;
         text-align: center;
-        margin-top: 50px;
+        margin: 0; /* Remove margin to avoid pushing content */
+        height: 100vh; /* Full height to center vertically */
       }
 
       body {
@@ -50,7 +54,7 @@
   <body>
     <!-- Video background -->
     <video autoplay muted loop id="video-bg">
-      <source src="background.mp4" type="video/mp4">
+      <source src="new.mp3" type="video/mp3">
       Your browser does not support the video tag.
     </video>
 
