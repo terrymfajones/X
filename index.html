@@ -7,6 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>X</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Style the button */
+      #playButton {
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      
+      /* Play icon style (you can customize this) */
+      #playButton::before {
+        content: '▶'; /* Play symbol */
+        color: #000; /* Change color to your preference */
+      }
+
+      /* Optionally, change the button appearance when hovered */
+      #playButton:hover {
+        color: #f00; /* Change to any color when hovered */
+      }
+    </style>
   </head>
   <body>
     <div id="news"></div>
@@ -20,7 +40,10 @@
       <a href="https://discord.gg/xfamily" id="text4">discord</a><br><br>
       <a href="https://www.instagram.com/bradannx/" id="text5">instagram</a><br><br>
 
-      <!-- Autoplay music (no controls) -->
+      <!-- Play button for music -->
+      <button id="playButton"></button>
+
+      <!-- Hidden audio element -->
       <audio id="bgMusic" loop>
         <source src="new.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -31,28 +54,16 @@
     <script src="https://embed.laylo.com/laylo-sdk.js"></script>
     <script src="index.js"></script>
 
-    <!-- Autoplay script -->
+    <!-- JavaScript for handling music play/pause -->
     <script>
-      window.addEventListener('load', function() {
-        var audio = document.getElementById('bgMusic');
+      const playButton = document.getElementById('playButton');
+      const audio = document.getElementById('bgMusic');
 
-        // Attempt to autoplay the audio when the page loads
-        var playPromise = audio.play();
-        
-        if (playPromise !== undefined) {
-          playPromise.then(function() {
-            // Autoplay started!
-          }).catch(function(error) {
-            // Autoplay was prevented, wait for user interaction to play the audio
-            console.log('Autoplay prevented. Waiting for user interaction.');
-
-            // Add a click listener to manually play the audio if blocked
-            window.addEventListener('click', function() {
-              audio.play();
-            });
-          });
-        }
-      });
-    </script>
-  </body>
-</html>
+      // When the user clicks the button, play or pause the music
+      playButton.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play();
+          playButton.innerHTML = '⏸';  // Change button to pause symbol
+        } else {
+          audio.pause();
+          play
