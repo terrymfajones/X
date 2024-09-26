@@ -20,8 +20,8 @@
       <a href="https://discord.gg/xfamily" id="text4">discord</a><br><br>
       <a href="https://www.instagram.com/bradannx/" id="text5">instagram</a><br><br>
 
-      <!-- Autoplay music (muted initially) -->
-      <audio autoplay loop muted>
+      <!-- Autoplay music (no controls) -->
+      <audio id="bgMusic" loop>
         <source src="new.mp3" type="audio/mp3">
         Your browser does not support the audio element.
       </audio>
@@ -30,5 +30,29 @@
     <!-- External scripts -->
     <script src="https://embed.laylo.com/laylo-sdk.js"></script>
     <script src="index.js"></script>
+
+    <!-- Autoplay script -->
+    <script>
+      window.addEventListener('load', function() {
+        var audio = document.getElementById('bgMusic');
+
+        // Attempt to autoplay the audio when the page loads
+        var playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.then(function() {
+            // Autoplay started!
+          }).catch(function(error) {
+            // Autoplay was prevented, wait for user interaction to play the audio
+            console.log('Autoplay prevented. Waiting for user interaction.');
+
+            // Add a click listener to manually play the audio if blocked
+            window.addEventListener('click', function() {
+              audio.play();
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
