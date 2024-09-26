@@ -1,12 +1,9 @@
-@media screen and (min-width: 600px) {
-**updated css  **
-
 body {
-background-image: url('images/Penis.png');
-  background-size: auto; /* Keeps the aspect ratio of the image */
-  background-position: top center; /* Aligns the image to the top center */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-color: black; /* Fallback color for when the image is not loaded */
+background-image: url('images/penis.png');
+  background-size: auto; /* Keeps the aspect ratio of the image /
+  background-position: top center; / Aligns the image to the top center /
+  background-repeat: no-repeat; / Prevents the image from repeating /
+  background-color: black; / Fallback color for when the image is not loaded /
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -15,9 +12,9 @@ background-image: url('images/Penis.png');
   color: rgba(255, 255, 255, 0.85);
   line-height: 1;
   font-style: normal;
-  height: 100vh; /* Ensures the body takes up full viewport height */
-  width: 100vw;  /* Ensures the body takes up full viewport width */
-  overflow: hidden; /* Prevents scrollbars from showing */
+  height: 100vh; / Ensures the body takes up full viewport height /
+  width: 100vw;  / Ensures the body takes up full viewport width /
+  overflow: hidden; / Prevents scrollbars from showing /
 }
 
 @media screen and (min-width: 600px) {
@@ -39,7 +36,7 @@ background-image: url('images/Penis.png');
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Optional: Adds a semi-transparent background to content */
+  background-color: rgba(0, 0, 0, 0.6); / Optional: Adds a semi-transparent background to content */
   padding: 20px;
   border-radius: 10px;
 }
@@ -58,24 +55,4 @@ background-image: url('images/Penis.png');
 
 .css-1b1jvye {
   display: none;
-}
-#text {
-  font-weight: 400;
-}
-
-#headline {
-  font-weight: 600;
-}
-
-#news {
-	width: 300px;
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.css-1b1jvye {
-	display: none;
-}
+} 
