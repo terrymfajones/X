@@ -1,4 +1,5 @@
-body {
+@media screen and (min-width: 600px) {
+  body {
 background-image: url('images/penis.png');
   background-size: auto; /* Keeps the aspect ratio of the image /
   background-position: top center; / Aligns the image to the top center /
@@ -40,19 +41,3 @@ background-image: url('images/penis.png');
   padding: 20px;
   border-radius: 10px;
 }
-
-#headline {
-  font-weight: 600;
-}
-
-#news {
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translate(-50%, -50%);
-}
-
-.css-1b1jvye {
-  display: none;
-} 
