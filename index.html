@@ -8,6 +8,18 @@
     <title>X</title>
     <link rel="stylesheet" href="style.css">
     <style>
+      /* Body styling to cover the entire viewport */
+      body {
+        margin: 0;
+        overflow: hidden; /* Disable scrollbars */
+        height: 100vh; /* Full height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('red-katana.gif') no-repeat center center fixed; /* Set your GIF here */
+        background-size: cover; /* Cover the entire background */
+      }
+
       /* Style the button */
       #playButton {
         font-size: 30px;
@@ -15,11 +27,22 @@
         border: none;
         cursor: pointer;
         color: white; /* Set the symbol color to white */
+        position: relative; /* Positioning for better alignment */
+        z-index: 1; /* Ensure the button is above the background */
       }
       
       /* Optionally, change the button appearance when hovered */
       #playButton:hover {
         color: #f0f0f0; /* Slightly lighter color when hovered (optional) */
+      }
+
+      /* Main content styling */
+      .maincenter {
+        position: relative;
+        z-index: 1; /* Bring content above the video */
+        color: white;
+        text-align: center;
+        margin-top: 50px;
       }
     </style>
   </head>
